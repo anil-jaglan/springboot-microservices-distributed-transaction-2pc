@@ -11,6 +11,20 @@
 
     <name>spring-boot-distributed-transaction</name>
 
+    <developers>
+        <developer>
+            <id>anil-jaglan</id>
+            <name>Anil Jaglan</name>
+            <email>aniljgln@gmail.com</email>
+            <timezone>Asia/Kolkata</timezone>
+        </developer>
+    </developers>
+    <contributors>
+        <contributor>
+            <name>Anil Jaglan</name>
+        </contributor>
+    </contributors>
+
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>

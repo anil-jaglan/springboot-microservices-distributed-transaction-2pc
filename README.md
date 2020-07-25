@@ -23,9 +23,9 @@ Each microservice exposes REST API interfaces that can be accessed through OpenA
  3. Add some test data to `account-service` and `product-service`
  4. Send order creation request to `order-service` for testing the flow.
 
- ## Architecture
+## Architecture
 
- In this microservice-based architecture `discovery-server` plays an important role for registering and retrieving the service instances from a centralize location.
+ In this microservice-based architecture design, `discovery-server` plays an important role for registering and retrieving the service instances from a centralize location.
  
  The `transaction-server` is responsible for maintaining transaction status for multiple services for a given transactionId.
 
