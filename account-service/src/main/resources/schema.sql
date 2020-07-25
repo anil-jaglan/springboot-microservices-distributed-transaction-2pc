@@ -1,0 +1,1 @@
+create table accounts (id bigint not null, balance integer, customer_id bigint, primary key (id));

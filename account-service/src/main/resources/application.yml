@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: account-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/distibuted_txn?useSSL=false
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate.ddl-auto: update
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 8080
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    appname: ${spring.application.name}
+    prefer-ip-address: true
+
+springdoc:
+  swagger-ui.path: /swagger-ui.html
+
+logging:
+  level:
+    org.springframework.data: ERROR
+    com.netflix: ERROR
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss:SSS} [S=${APP_NAME:-}] [T=%X{traceId}] %-5level %logger{36}.%L %msg%n'
