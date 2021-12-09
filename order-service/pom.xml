@@ -13,6 +13,10 @@
     <artifactId>order-service</artifactId>
     <name>order-service</name>
 
+    <properties>
+        <start-class>io.learning.order.StartOrderService</start-class>
+    </properties>
+
     <dependencies>
         <!-- Intra-module dependencies -->
         <dependency>
@@ -66,4 +70,28 @@
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                    <layers>
+                        <enabled>true</enabled>
+                    </layers>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
